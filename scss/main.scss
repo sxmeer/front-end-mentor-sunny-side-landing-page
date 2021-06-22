@@ -1,0 +1,302 @@
+@import "config";
+@import "util";
+
+.container {
+  .header {
+    background-image: url("../images/desktop/image-header.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 120vh;
+    .mobile__menu {
+      display: none;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 2rem;
+      .header__menu {
+        display: none;
+      }
+      ul {
+        display: flex;
+        li {
+          margin-left: 2.5rem;
+          a {
+            color: $white;
+            font-size: $font-small;
+            font-family: $font-family-barlow;
+          }
+          &:last-child > a {
+            color: black;
+            background-color: $white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 2rem;
+            font-size: $font-medium;
+            font-family: $font-family-fraunces;
+            transition: background-color 300ms ease-in-out;
+            &:hover {
+              color: white;
+              background-color: $white-20;
+            }
+          }
+        }
+      }
+    }
+    &__title {
+      text-align: center;
+      margin-top: 6rem;
+      letter-spacing: 0.5rem;
+      font-size: $font-header;
+      text-transform: uppercase;
+      color: $white;
+      font-weight: 900;
+      font-family: $font-family-fraunces;
+    }
+    &__downwardArrow {
+      margin-top: 9rem;
+      text-align: center;
+    }
+  }
+
+  .side {
+    display: flex;
+    .side__container {
+      width: 50%;
+      padding: 10rem 0rem;
+      line-height: 1.6;
+      & > div {
+        width: 60%;
+        margin: auto;
+      }
+    }
+    &__title {
+      font-family: $font-family-fraunces;
+      font-size: $font-large;
+      font-weight: 900;
+    }
+    &__desc {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      color: $grayish-blue;
+      font-family: $font-family-barlow;
+      font-size: $font-small;
+      font-weight: 600;
+    }
+    &__link {
+      text-transform: none;
+      color: black;
+      font-family: $font-family-fraunces;
+      font-weight: 700;
+      font-size: $font-medium;
+      text-transform: uppercase;
+      padding: 0rem 0.5rem;
+      z-index: 1;
+      position: relative;
+    }
+    .side__image {
+      width: 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+  #first {
+    .side__image {
+      background-image: url("../images/desktop/image-transform.jpg");
+    }
+    a {
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        z-index: -1;
+        left: 0;
+        height: 0.5rem;
+        background-color: $yellow-50;
+        transition: background-color 500ms ease-in-out;
+      }
+      &:hover::after {
+        background-color: $yellow;
+      }
+    }
+  }
+
+  #second {
+    .side__image {
+      background-image: url("../images/desktop/image-stand-out.jpg");
+    }
+    a {
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        z-index: -1;
+        left: 0;
+        height: 0.5rem;
+        background-color: $soft-red-50;
+        transition: background-color 500ms ease-in-out;
+      }
+      &:hover::after {
+        background-color: $soft-red;
+      }
+    }
+  }
+
+  section.self__contained {
+    display: flex;
+    text-align: center;
+    .contained {
+      width: 50%;
+      line-height: 1.6;
+      padding: 25rem 0rem 5rem 0rem;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      &__title {
+        max-width: 50%;
+        margin: auto;
+        margin-bottom: 2rem;
+        font-size: $font-md-lg;
+        font-family: $font-family-fraunces;
+        color: $dark-blue;
+      }
+      &__desc {
+        margin: auto;
+        max-width: 45%;
+        font-size: $font-small;
+        font-family: $font-family-barlow;
+      }
+    }
+  }
+
+  #third {
+    background-image: url("../images/desktop/image-graphic-design.jpg");
+    color: $dark-desaturated-cyan;
+  }
+
+  #fourth {
+    background-image: url("../images/desktop/image-photography.jpg");
+    color: $dark-blue;
+  }
+
+  .testimonials {
+    text-align: center;
+    padding: 8rem 0rem;
+    &__heading {
+      color: $grayish-blue;
+      text-transform: uppercase;
+      font-size: $font-medium;
+      letter-spacing: 0.3rem;
+      font-family: $font-family-fraunces;
+      font-weight: 900;
+      margin-bottom: 4rem;
+    }
+    &__container {
+      display: flex;
+      width: 80%;
+      margin: auto;
+      .testimonial {
+        padding: 0rem 1rem;
+        img {
+          width: 5rem;
+          height: 5rem;
+          border-radius: 5rem;
+        }
+        &__desc {
+          font-family: $font-family-barlow;
+          font-size: $font-small;
+          margin-top: 3rem;
+          line-height: 1.6;
+          color: $dark-grayish-blue;
+          font-weight: 600;
+        }
+        &__name {
+          font-family: $font-family-fraunces;
+          font-size: $font-medium;
+          margin-top: 3rem;
+          font-weight: 700;
+        }
+        &__desg {
+          font-family: $font-family-barlow;
+          font-size: $font-x-sm;
+          font-weight: 600;
+          color: $grayish-blue;
+          margin-top: 0.5rem;
+        }
+      }
+    }
+  }
+  .image__container {
+    display: flex;
+    height: 475px;
+    & > * {
+      width: 25%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &__1 {
+      background-image: url("../images/desktop/image-gallery-milkbottles.jpg");
+    }
+    &__3 {
+      background-image: url("../images/desktop/image-gallery-cone.jpg");
+    }
+    &__2 {
+      background-image: url("../images/desktop/image-gallery-orange.jpg");
+    }
+    &__4 {
+      background-image: url("../images/desktop/image-gallery-sugarcubes.jpg");
+    }
+  }
+
+  footer {
+    padding: 3rem;
+    margin: auto;
+    text-align: center;
+    background-color: $dark-moderate-cyan;
+    .footer__image {
+      height: 24px;
+      width: 124px;
+      cursor: pointer;
+    }
+    a {
+      color: $dark-desaturated-cyan;
+      transition: color 300ms ease-in-out;
+      font-family: $font-family-barlow;
+      font-weight: 600;
+      &:hover {
+        color: white;
+      }
+    }
+    .footer__links {
+      margin-top: 2.5rem;
+      margin-bottom: 2.5rem;
+      ul {
+        text-align: center;
+        margin: auto;
+        li {
+          display: inline-block;
+          margin: 0rem 1.5rem;
+        }
+      }
+    }
+    .footer__link__images {
+    }
+    .footer__link__image > i {
+      margin: 0rem 1rem;
+      font-size: 1.1rem;
+      color: $dark-desaturated-cyan;
+      transition: color 300ms ease-in-out;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}
+
+@import "mobile";
